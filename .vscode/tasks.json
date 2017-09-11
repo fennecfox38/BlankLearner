@@ -1,0 +1,42 @@
+{
+    "version": "2.0.0",
+    "runner": "terminal",
+    "type": "shell",
+    "echoCommand": true,
+    "presentation": { "reveal": "always" },
+    "tasks": [
+        {
+            "label": "Debug Build",
+            "type": "shell",
+            "command": "mingw32-make",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Release Build",
+            "type": "shell",
+            "command": "mingw32-make RELEASE=1",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "make clean",
+            "type": "shell",
+            "command": "mingw32-make clean",
+            "group": "none",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}
